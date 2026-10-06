@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>csharp_xml</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\data\elisaveta_sugupuu.xml" />
+    <None Include="wwwroot\data\elisaveta_sugupuu_paring.xslt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NuLua" Version="0.1.0" />
+    <PackageReference Include="NuLua.Luau" Version="0.1.0" />
+    <PackageReference Include="NuLua.Runtime.Luau" Version="0.1.0" />
+  </ItemGroup>
+
+</Project>

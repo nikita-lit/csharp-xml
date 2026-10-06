@@ -1,0 +1,17 @@
+nimi {
+    display: block;
+    margin: 10px;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    width: 200px;
+    border: 1px solid grey;
+}
+
+inimene {
+    background-color: greenyellow;
+    padding: 10px;
+    margin-left: 1%;
+    width: 20%;
+}
+

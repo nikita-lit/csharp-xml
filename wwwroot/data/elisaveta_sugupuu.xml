@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="elisaveta_sugupuu_paring.xslt"?>
+<!--<?xml-stylesheet type="text/css" href="xml-style.css"?>-->
+
+<!-- jada -->
+<inimene synd="1926">
+    <nimi>Elisaveta II</nimi>
+    <lapsed>
+        <inimene synd="1948">
+            <nimi>Charlles</nimi>
+            <lapsed>
+                <inimene synd="1984">
+                    <nimi>Prints Harry</nimi>
+                </inimene>
+                <inimene synd="1982">
+                    <nimi>William</nimi>
+                </inimene>
+            </lapsed>
+        </inimene>
+        <inimene synd="1950">
+            <nimi>C_Anne</nimi>
+        </inimene>
+    </lapsed>
+</inimene>
