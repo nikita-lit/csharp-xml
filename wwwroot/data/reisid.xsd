@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="reisid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="reis">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="suund">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nimetus" type="xs:string" />
+                    <xs:element name="riik" type="xs:string" />
+                    <xs:element name="pikkus" type="xs:decimal" />
+                    <xs:element minOccurs="0" name="reisihind" type="xs:unsignedShort" />
+                    <xs:element minOccurs="0" name="transport" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="aasta" type="xs:unsignedShort" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,8 +1,6 @@
 using System.Diagnostics;
-using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using csharp_xml.Models;
-using NuLua;
 
 namespace csharp_xml.Controllers;
 
@@ -25,41 +23,7 @@ public class HomeController : Controller
     
     public IActionResult XMLskeem()
     {
-        Program.Luau.DoString("Test()");
-        return View(); 
-    }
-
-    public IActionResult LuauPage()
-    {
-        return View(new LuauModel());
-    }
-    
-    [HttpPost]
-    public IActionResult SubmitForm(LuauModel model)
-    {
-        var code = model.Code;
-        
-        Console.WriteLine(code);
-
-        string output;
-        
-        try
-        {
-            Program.LuauOutput.Clear();
-            Program.Luau.DoString(code);
-            output = Program.LuauOutput.ToString();
-        }
-        catch (Exception e)
-        {
-            output = e.ToString();
-            Console.WriteLine(e.ToString());
-        }
-
-        return View("LuauPage", new LuauModel()
-        {
-            Code = code,
-            Output = output
-        });
+        return View();
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

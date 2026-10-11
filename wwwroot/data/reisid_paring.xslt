@@ -37,18 +37,23 @@
 
                 <strong>Kõik suunad:</strong>
 
-                <h1>
-                    <xsl:for-each select="reisid/reis/suund">
+                <xsl:for-each select="reisid/reis/suund">
+                    <h1>
                         <xsl:value-of select="riik"/>
-                        <br/>
-                    </xsl:for-each>
-                </h1>
+                    </h1>
+                </xsl:for-each>
 
                 <ul>
                     <xsl:for-each select="reisid/reis/suund">
-                        <li style="background-color: yellow;">
-                            <xsl:value-of
-                                    select="concat(riik, ' ', pikkus, ' päeva, ', nimetus)"/>
+                        <li>
+                            <span style="background-color: yellow;">
+                                <xsl:value-of select="riik"/>
+                                <xsl:text> - </xsl:text>
+                                <xsl:value-of select="pikkus"/>
+                                <xsl:text> päeva</xsl:text>
+                            </span>
+                            
+                            <xsl:value-of select="concat(', ', nimetus)"/>
                         </li>
                     </xsl:for-each>
                 </ul>
@@ -60,6 +65,13 @@
 
                             <xsl:if test="pikkus &gt; 4">
                                 <strong> - Pikk reis</strong>
+                            </xsl:if>
+
+                            <br/>
+                            <xsl:if test="string-length(reisihind) > 0">
+                                hind:
+                                <xsl:value-of select="reisihind"/>
+                                €
                             </xsl:if>
                         </li>
                     </xsl:for-each>
